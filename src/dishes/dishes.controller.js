@@ -6,7 +6,7 @@ const dishes = require(path.resolve("src/data/dishes-data"));
 // Use this function to assign ID's when necessary
 const nextId = require("../utils/nextId");
 
-// Middleware factory: returns a middleware that checks a named field is present and non-empty
+// Middleware: returns a middleware that checks a named field is present and non-empty
 function bodyDataHas(propertyName) {
   return function (req, res, next) {
     const { data = {} } = req.body;
